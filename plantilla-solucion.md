@@ -60,18 +60,54 @@ docker run -e DB_HOST=$(docker inspect -f '{{range .NetworkSettings.Networks}}{{
 
 ## Respuesta de la **Actividad 4.1**
 
-```yml
-
+```bash
+docker login
+docker tag app:v1.0 tux550/app:v1.0
+docker push tux550/app:v1.0
 ```
+
 
 ## Respuesta de la **Actividad 5.1**
 
-```bash
 
+```yml
+version: '1'
+
+services:
+  db:
+    image: postgres:latest
+    container_name: boston-db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=BOSTON
+    volumes:
+      - boston-data:/var/lib/postgresql/data
+      - ./db.sql:/docker-entrypoint-initdb.d/db.sql
+      - ./init.sh:/docker-entrypoint-initdb.d/init.sh
+    ports:
+      - "5432:5432"
+  app:
+    image: tux550/app:v1.0
+    container_name: boston-app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
+
+volumes:
+  boston-data:
 ```
 
 ## Respuesta de la **Actividad 5.2**
 
 ```bash
+docker-compose up -d
+```
 
+```bash
+# Auxiliar para eliminar volumenes
+docker-compose down --volumes
 ```
