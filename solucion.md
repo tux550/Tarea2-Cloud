@@ -2,7 +2,7 @@
 
 ## Respuesta de la **Actividad 1.1**
 
-Comando para crear un volumen de datos en Docker
+Crear un volumen para garantizar la persistencia de los datos de la base de datos.
 ```bash
 docker volume create boston-data
 ```
