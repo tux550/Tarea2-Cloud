@@ -1,5 +1,8 @@
 # Respuestas
 
+## Video
+[Video de la solución](https://youtu.be/3dAK1I88KJQ)
+
 ## Respuesta de la **Actividad 1.1**
 
 Crear un volumen para garantizar la persistencia de los datos de la base de datos.
