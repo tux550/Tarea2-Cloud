@@ -103,7 +103,7 @@ docker push tux550/app:v1.0
 
 
 ```yml
-version: '1'
+version: '3.7'
 
 services:
   # Servicio de la base de datos

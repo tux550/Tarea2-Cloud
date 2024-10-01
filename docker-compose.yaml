@@ -1,5 +1,5 @@
 # Implementar el docker-compose.yaml
-version: '1'
+version: '3.7'
 
 services:
   db:
