@@ -1,9 +1,10 @@
 # Respuestas
 
 ## Video
-[Version corta (9min)](https://youtu.be/jYaUjsFQ3qs)
 
 [Version completa (14min)](https://youtu.be/3dAK1I88KJQ)
+[Version corta (9min)](https://youtu.be/jYaUjsFQ3qs)
+
 
 
 ## Respuesta de la **Actividad 1.1**
